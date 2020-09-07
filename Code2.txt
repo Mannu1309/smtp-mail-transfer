@@ -1,0 +1,10 @@
+import smtplib
+server=smtplib.SMTP("smtp.gmail.com",587)
+server.starttls()
+server.login("--you email id--","--password--")
+message="""From: From "name"
+To:"Reciever's Email id"
+Subject: "<Subject>"
+"Your Message"
+"""
+server.sendmail("--your email id--","--Reciever's email id--",message)
